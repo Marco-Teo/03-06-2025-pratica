@@ -1,22 +1,16 @@
 package it.epicode.u5w1d1teoria.bean;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import it.epicode.u5w1d1teoria.bean.Pizza;
+import it.epicode.u5w1d1teoria.bean.Drink;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Map;
 
-@Data
-@NoArgsConstructor
 @Component
 public class Menu {
-    @Autowired
-    private List<Prodotto> prodotti;
 
-    private ApplicationContext context;
+    private final ApplicationContext context;
 
     public Menu(ApplicationContext context) {
         this.context = context;
